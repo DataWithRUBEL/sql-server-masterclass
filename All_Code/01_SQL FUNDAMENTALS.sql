@@ -30,12 +30,12 @@ FROM Customers;
 
 ✅ WHERE
 What it does: Filter করে specific conditions based এ
--- India থেকে সব customers
+-- Bangladesh থেকে সব customers
 SELECT 
   CustomerName, 
   Country 
 FROM Customers 
-WHERE Country = 'India';
+WHERE Country = 'Bangladesh';
 
 -- Price ৫০০০ এর উপরে products
 SELECT 
