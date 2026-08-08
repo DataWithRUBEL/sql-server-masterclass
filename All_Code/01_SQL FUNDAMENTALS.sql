@@ -5,19 +5,19 @@
 What it does: Data retrieve করে tables থেকে
 -- All columns
 SELECT * 
-  FROM Customers;
+FROM Customers;
 
 -- Specific columns
 SELECT 
   CustomerID, 
   CustomerName, 
   Email 
-  FROM Customers;
+FROM Customers;
 
 -- Single column
 SELECT 
   ProductName 
-  FROM Products;
+FROM Products;
 
 
 ✅ FROM
@@ -76,9 +76,9 @@ SELECT
   TotalAmount 
 FROM Orders o
 INNER JOIN Customers c 
-  ON o.CustomerID = c.CustomerID
+ON o.CustomerID = c.CustomerID
 ORDER BY CustomerName ASC, 
-  OrderDate DESC;
+         OrderDate DESC;
 
 
 ✅ GROUP BY
@@ -104,7 +104,7 @@ SELECT
   SUM(o.TotalAmount) AS TotalSpent
 FROM Customers c
 LEFT JOIN Orders o 
-  ON c.CustomerID = o.CustomerID
+ON c.CustomerID = o.CustomerID
 GROUP BY c.CustomerID, c.CustomerName;
 
 
@@ -124,7 +124,7 @@ SELECT
   SUM(o.TotalAmount) AS TotalSpent
 FROM Customers c
 INNER JOIN Orders o 
-  ON c.CustomerID = o.CustomerID
+ON c.CustomerID = o.CustomerID
 GROUP BY c.CustomerID, c.CustomerName
 HAVING SUM(o.TotalAmount) > 50000;
 
@@ -162,7 +162,7 @@ SELECT TOP 2
   SUM(o.TotalAmount) AS TotalSpent
 FROM Customers c
 INNER JOIN Orders o 
-  ON c.CustomerID = o.CustomerID
+ON c.CustomerID = o.CustomerID
 GROUP BY c.CustomerID, c.CustomerName
 ORDER BY TotalSpent DESC;
 
@@ -198,7 +198,7 @@ SELECT
     o.OrderDate
 FROM Customers c
 INNER JOIN Orders o 
-  ON c.CustomerID = o.CustomerID;
+ON c.CustomerID = o.CustomerID;
 
 
 ✅ Comments
